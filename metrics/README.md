@@ -1,8 +1,5 @@
 # ✨ Оценка качества сгенерированных поздравлений ✨
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Patrik1352/Agents/metrics)
-![GitHub last commit](https://img.shields.io/github/last-commit/Patrik1352/Agents/metrics)
-
 ## Обзор
 
 Проект представляет собой исследование метрик для оценки качества текстов поздравлений, сгенерированных различными языковыми моделями. В рамках исследования были рассмотрены такие метрики, как:

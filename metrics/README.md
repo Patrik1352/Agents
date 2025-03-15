@@ -60,23 +60,12 @@ ROUGE (Recall-Oriented Understudy for Gisting Evaluation) - это набор м
 
 Формулы для каждой из этих метрик выглядят следующим образом:
 
-**ROUGE-N:**
-
-$$ \text{ROUGE-N} = \frac{\sum_{S \in \text{RS}} \sum_{\text{n-gram} \in S} \text{Count}_{\text{match}}(\text{n-gram})}{\sum_{S \in \text{RS}} \sum_{\text{n-gram} \in S} \text{Count}(\text{n-gram})} $$
-
-где RS - множество эталонных текстов, Count_match(n-gram) - количество совпадающих n-грамм между автоматически сгенерированным текстом и эталоном, а Count(n-gram) - общее количество n-грамм в эталоне.
-
 **ROUGE-L:**
 
 $$ \text{ROUGE-L} = \frac{(1 + \beta^2) \cdot P_r \cdot R_r}{R_r + \beta^2 \cdot P_r} $$
 
 где $P_r$ - точность (precision), $R_r$ - полнота (recall), $\beta$ - коэффициент, который контролирует баланс между точностью и полнотой.
 
-**ROUGE-S:**
-
-$$ \text{ROUGE-S} = \frac{\sum_{S \in \text{RS}} \sum_{\text{skipped bigram} \in S} \text{Count}_{\text{match}}(\text{skipped bigram})}{\sum_{S \in \text{RS}} \sum_{\text{skipped bigram} \in S} \text{Count}(\text{skipped bigram})} $$
-
-где skipped bigram - это пара слов, которые могут быть разделены другими словами, но все еще считаются связанными.
 
 ### METEOR
 
@@ -107,20 +96,6 @@ $$
 - $\text{Precision}(w_i)$ - точность для токена $w_i$,
 - $\text{Recall}(w_i)$ - полнота для токена $w_i$.
 
-Точность и полнота определяются как:
-
-$$
-\text{Precision}(w_i) = \frac{\text{CosSim}(\mathbf{h}_{w_i}, \mathbf{r}_j)}{\max_k(\text{CosSim}(\mathbf{h}_{w_i}, \mathbf{r}_k))}
-$$
-
-$$
-\text{Recall}(w_i) = \frac{\text{CosSim}(\mathbf{h}_{w_i}, \mathbf{r}_j)}{\max_l(\text{CosSim}(\mathbf{h}_{w_l}, \mathbf{r}_j))}
-$$
-
-где:
-- $\mathbf{h}_{w_i}$ - представление слова $w_i$ в гипотезе,
-- $\mathbf{r}_j$ - представление слова $r_j$ в референсе,
-- $\text{CosSim}$ - косинусное сходство между векторами представлений слов.
 
 Таким образом, BERTScore оценивает качество перевода или генерации текста, учитывая семантическое соответствие между словами в контексте обоих текстов.
 

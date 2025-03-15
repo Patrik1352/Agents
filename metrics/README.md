@@ -1,7 +1,7 @@
 # ✨ Оценка качества сгенерированных поздравлений ✨
 
-![GitHub repo size](https://img.shields.io/github/repo-size/username/repo-name)
-![GitHub last commit](https://img.shields.io/github/last-commit/username/repo-name)
+![GitHub repo size](https://img.shields.io/github/repo-size/Patrik1352/Agents/metrics)
+![GitHub last commit](https://img.shields.io/github/last-commit/Patrik1352/Agents/metrics)
 
 ## Обзор
 
